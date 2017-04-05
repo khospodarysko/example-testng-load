@@ -4,4 +4,4 @@
 
 # Build
 target/
-!target/surefire-reports
+!target/surefire-reports/html/
