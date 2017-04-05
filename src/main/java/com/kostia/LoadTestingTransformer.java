@@ -11,13 +11,11 @@ public class LoadTestingTransformer implements IAnnotationTransformer {
     public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
         try {
             int invocationCount = Integer.parseInt(System.getProperty("invocationCount", "1"));
-            System.out.println("invocationCount " + invocationCount);
             if (invocationCount > 1) {
                 iTestAnnotation.setInvocationCount(invocationCount);
             }
 
             int threadPoolSize = Integer.parseInt(System.getProperty("threadPoolSize", "1"));
-            System.out.println("threadPoolSize " + threadPoolSize);
             if (invocationCount > 1) {
                 iTestAnnotation.setThreadPoolSize(threadPoolSize);
             }

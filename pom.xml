@@ -79,6 +79,10 @@
                     <threadCount>${threadCount}</threadCount>
                     <properties>
                         <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
                             <name>listener</name>
                             <value>
                                 com.kostia.LoadTestingTransformer,
@@ -91,6 +95,7 @@
                             <value>continue</value>
                         </property>
                     </properties>
+                    <workingDirectory>target/</workingDirectory>
                 </configuration>
             </plugin>
         </plugins>
